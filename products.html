@@ -1,106 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/style.css">
+    <title>Products | FreshKart Farm</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-rel="stylesheet">
+    <link rel="shortcut icon"
+          href="Assests/logo.png"
+          type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
 </head>
 
 <body>
-<!-- Header/Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
-    <div class="container">
 
-        <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center"
-           href="index.html">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container">
 
-            <img src="Assests/logo.png"
-                 width="40"
-                 height="40"
-                 class="rounded-circle me-2"
-                 alt="Logo">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center"
+               href="index.html">
 
-            <span class="fw-bold">
-                FreshKart Farm
-            </span>
-        </a>
+                <img src="Assests/logo.png"
+                     width="40"
+                     height="40"
+                     class="rounded-circle me-2"
+                     alt="Logo">
 
-        <!-- Mobile Toggle -->
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu">
+                <span class="fw-bold">
+                    FreshKart Farm
+                </span>
 
-            <span class="navbar-toggler-icon"></span>
+            </a>
 
-        </button>
+            <!-- Mobile Button -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu">
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse"
-             id="navbarMenu">
+                <span class="navbar-toggler-icon"></span>
 
-            <ul class="navbar-nav ms-auto">
+            </button>
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="index.html">
-                        <i class="fa-solid fa-house me-1"></i>
-                        Home
-                    </a>
-                </li>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse"
+                 id="navbarMenu">
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="products.html">
-                        Products
-                    </a>
-                </li>
+                <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="login.html">
-                        Login
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="index.html">
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="signup.html">
-                        Sign Up
-                    </a>
-                </li>
+                            <i class="fa-solid fa-house me-1"></i>
+                            Home
 
-            </ul>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           href="products.html">
+
+                            Products
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="login.html">
+
+                            Login
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="signup.html">
+
+                            Sign Up
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <div class="container py-5">
+
+        <h1 class="text-center mb-4">
+            Our Products
+        </h1>
+
+        <!-- Search -->
+        <input type="text"
+               class="form-control mb-4"
+               id="search"
+               placeholder="Search Product...">
+
+        <!-- Product Cards -->
+        <div class="row g-4"
+             id="productContainer">
 
         </div>
 
     </div>
-</nav>
-<div class="container py-5">
 
-<h1 class="text-center">
-Products
-</h1>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<input
-type="text"
-class="form-control mb-4"
-id="search"
-placeholder="Search Product">
-
-<div class="row"
-id="productContainer">
-
-</div>
-
-</div>
-
-<script src="js/script.js">
-</script>
+    <!-- Script -->
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>

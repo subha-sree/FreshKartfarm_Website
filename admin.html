@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="shortcut icon" href="Assests/logo.png" type="image/x-icon">
 <title>
 Admin Dashboard
 </title>
@@ -67,17 +67,9 @@ rel="stylesheet">
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link"
-                       href="login.html">
-                        Login
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="signup.html">
-                        Sign Up
-                    </a>
+                    <button class="btn btn-outline-light ms-3" data-logout>
+                        Logout
+                    </button>
                 </li>
 
             </ul>
@@ -86,80 +78,87 @@ rel="stylesheet">
 
     </div>
 </nav>
-<div class="container py-5">
+<div class="container py-5" id="adminDashboard">
 
-<h1>
-Admin Dashboard
-</h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="mb-1">Admin Dashboard</h1>
+            <p class="text-muted">Welcome, <strong id="adminName"></strong></p>
+        </div>
+        <div class="text-end">
+            <p class="mb-1"><strong>Email:</strong> <span id="adminEmail"></span></p>
+        </div>
+    </div>
 
-<div class="row g-4">
+    <div class="row g-4">
 
-<div class="col-md-4">
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body text-center">
+                    <h2 id="adminCustomers">0</h2>
+                    <p>Customers</p>
+                </div>
+            </div>
+        </div>
 
-<div class="card stat-card">
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body text-center">
+                    <h2 id="adminFarmers">0</h2>
+                    <p>Farmers</p>
+                </div>
+            </div>
+        </div>
 
-<div class="card-body text-center">
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body text-center">
+                    <h2 id="adminOrders">0</h2>
+                    <p>Orders</p>
+                </div>
+            </div>
+        </div>
 
-<h2>
-150
-</h2>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body text-center">
+                    <h2 id="adminProducts">0</h2>
+                    <p>Products</p>
+                </div>
+            </div>
+        </div>
 
-<p>
-Customers
-</p>
+    </div>
+
+    <div class="mt-5">
+        <h3>Recent Orders</h3>
+        <ul class="list-group" id="orders"></ul>
+    </div>
+
+    <div class="mt-5">
+        <h3>Add Product</h3>
+        <form id="addProductForm" class="row g-3">
+            <div class="col-md-4">
+                <input id="productName" type="text" class="form-control" placeholder="Product Name" required>
+            </div>
+            <div class="col-md-3">
+                <input id="productPrice" type="number" class="form-control" placeholder="Price" required>
+            </div>
+            <div class="col-md-3">
+                <input id="productQuantity" type="number" class="form-control" placeholder="Quantity" required>
+            </div>
+            <div class="col-md-3">
+                <input id="productImage" type="text" class="form-control" placeholder="Image URL" required>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-success">Add Product</button>
+            </div>
+        </form>
+    </div>
 
 </div>
 
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card stat-card">
-
-<div class="card-body text-center">
-
-<h2>
-45
-</h2>
-
-<p>
-Farmers
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card stat-card">
-
-<div class="card-body text-center">
-
-<h2>
-320
-</h2>
-
-<p>
-Orders
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<script src="js/script.js">
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

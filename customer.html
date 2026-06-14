@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Customer Dashboard</title>
-
+<link rel="shortcut icon" href="Assests/logo.png" type="image/x-icon">
 <link rel="stylesheet"
 href="css/style.css">
 
@@ -64,17 +64,9 @@ rel="stylesheet">
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link"
-                       href="login.html">
-                        Login
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="signup.html">
-                        Sign Up
-                    </a>
+                    <button class="btn btn-outline-light ms-3" data-logout>
+                        Logout
+                    </button>
                 </li>
 
             </ul>
@@ -83,54 +75,85 @@ rel="stylesheet">
 
     </div>
 </nav>
-<div class="container py-5">
 
-<h1 class="text-center">
-Customer Dashboard
-</h1>
-
-<div class="row g-4 mt-4">
-
-<div class="col-md-3">
-<div class="card stat-card">
-<div class="card-body text-center">
-
-<h2 id="cartCount">
-0
-</h2>
-
-<p>
-Cart Items
-</p>
-
-</div>
-</div>
+<div class="hero-banner text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-6 fw-bold">Welcome to FreshKart Farm</h1>
+                <p class="lead text-white-75">Fresh produce delivered by local farmers. Explore products, manage your cart, and track orders from a polished customer dashboard.</p>
+            </div>
+            <div class="col-md-4 text-md-end mt-4 mt-md-0">
+                <a href="products.html" class="btn btn-light btn-lg">Browse All Products</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="col-md-3">
-<div class="card stat-card">
-<div class="card-body text-center">
+<div class="container py-5" id="customerDashboard">
 
-<h2>
-12
-</h2>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
+        <div>
+            <h1 class="mb-1">Customer Dashboard</h1>
+            <p class="text-muted">Welcome back, <strong id="customerName"></strong></p>
+        </div>
+        <div class="text-md-end mt-3 mt-md-0">
+            <p class="mb-1"><strong>Email:</strong> <span id="customerEmail"></span></p>
+            <p class="mb-1"><strong>Phone:</strong> <span id="customerPhone"></span></p>
+            <p class="mb-0"><strong>Address:</strong> <span id="customerAddress"></span></p>
+        </div>
+    </div>
 
-<p>
-Orders
-</p>
+    <div class="row g-4 mt-4">
 
-</div>
-</div>
-</div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body text-center">
+                    <h2 id="cartCount">0</h2>
+                    <p>Cart Items</p>
+                </div>
+            </div>
+        </div>
 
-</div>
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <div class="card-body text-center">
+                    <h2 id="orderCount">0</h2>
+                    <p>Orders</p>
+                </div>
+            </div>
+        </div>
 
-<a href="products.html"
-class="btn btn-success mt-4">
+        <div class="col-md-6">
+            <div class="card stat-card">
+                <div class="card-body">
+                    <h5>Cart Summary</h5>
+                    <ul class="list-group" id="customerCartItems"></ul>
+                    <div class="mt-3">
+                        <strong>Total:</strong> <span id="cartTotal">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-Browse Products
+    </div>
 
-</a>
+    <div class="mt-5">
+        <h3 class="mb-3">Fresh Products for You</h3>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <p class="text-muted mb-0">Explore all available products from our farmers.</p>
+            <button class="btn btn-outline-success btn-sm" onclick="fetchProducts()">Refresh Products</button>
+        </div>
+        <div id="customerProductList" class="row g-4"></div>
+    </div>
+
+    <div class="mt-5">
+        <h3>My Orders</h3>
+        <p class="text-muted mb-3">Total Orders: <span id="orderCountSummary">0</span></p>
+        <ul class="list-group" id="orders"></ul>
+    </div>
+
+    <a href="products.html" class="btn btn-success mt-4">Browse More Products</a>
 
 </div>
 
