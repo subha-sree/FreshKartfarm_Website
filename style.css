@@ -1,0 +1,64 @@
+body{
+    font-family:Segoe UI;
+    background:#f8f9fa;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url("../Assests/bg_5.webp");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.module-card,
+.stat-card,
+.product-card{
+    transition:0.5s;
+    cursor:pointer;
+}
+
+.module-card:hover,
+.stat-card:hover,
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.2);
+
+}
+
+footer{
+    background:#212529;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.product-card img{
+    height:250px;
+    object-fit:cover;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+}
